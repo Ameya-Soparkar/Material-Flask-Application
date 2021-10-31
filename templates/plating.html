@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h2 style="text-align:center">Plating</h2>
+
+
+
+<form action="/plating_entry" method="post" style="text-align:center">
+
+    <select name="material_name">
+        {%for row in rows%}
+        <option value="{{ row[1] }}">{{ row[1] }}</option>
+        {%endfor%}
+    </select>
+    <input name="material_weight" placeholder="Material Weight in Kg" type="text">
+    <input value="Received from Plating" type="submit" class="btn-primary">
+</form>
+
+<br>
+
+<table class="table  table-bordered table-hover">
+
+    <!-- Table headers -->
+    <th>
+        <tr>
+            <td>Number</td>
+            <td>Material</td>
+            <td>Weight</td>
+            <td>Total Numbers</td>
+        </tr>
+    </th>
+    {%for row in rows%}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+
+        {%endfor%}
+
+    </tr>
+
+</table>
+
+
+
+
+{% endblock %}
+
+
+

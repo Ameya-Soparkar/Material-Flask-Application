@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h2 style="text-align:center">Total</h2>
+
+<br>
+
+<form action="/total" method="post">
+
+<table class="table  table-bordered table-hover">
+
+    <!-- Table headers -->
+    <th>
+        <tr>
+            <td>Material</td>
+            <td>Weight</td>
+            <td>Total Numbers</td>
+        </tr>
+    </th>
+    {%for row in rows%}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+
+        {%endfor%}
+
+    </tr>
+
+</table>
+
+
+
+
+{% endblock %}
+
+
+
