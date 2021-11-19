@@ -1,6 +1,6 @@
 # Material-Flask-Application
 
-This project is a web application of a project created using Tkinter. 
+This project is a web application of a project created previously using Tkinter library. 
 
 This project is made using Flask and Sqlite3.
 
